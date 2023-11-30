@@ -817,6 +817,48 @@ footer .navbar-brand {
   }
 }
 
+.subBanner {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  max-height: 307px;
+  height: 16vw;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  .subBanner {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .subBanner {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .subBanner {
+    height: 130px;
+  }
+}
+
+.subBannerContainer {
+  width: 100%;
+  position: relative;
+}
+.subBannerContainer .title {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .subBannerContainer .title {
+    padding: 0;
+  }
+}
+
 .modal {
   --bs-modal-bg: #132a3fba;
   --bs-backdrop-bg: #132a3fba;
@@ -871,6 +913,54 @@ footer .navbar-brand {
 .modal .btn-close .customIcon {
   transform: rotate(90deg);
   font-size: 40px;
+}
+
+.leftMenuColumn {
+  position: relative;
+  z-index: 1;
+  width: 31%;
+  min-width: 31%;
+}
+.leftMenuColumn:before {
+  content: "";
+  width: 121%;
+  height: 140%;
+  top: -32px;
+  right: 100px;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(92.01% 94.03% at 133.7% 87.97%, #ededed 0, rgba(246, 246, 246, 0) 83%);
+  z-index: -1;
+}
+@media screen and (max-width: 1400px) {
+  .leftMenuColumn:before {
+    width: 150%;
+    height: 135%;
+    top: -40px;
+    right: 60px;
+  }
+}
+.leftMenuColumn .leftMenu .menu-item {
+  overflow: hidden;
+  color: var(--gray-400, #CED4DA);
+  text-align: right;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: block;
+  margin: 22px 0;
+  transition: all 0.3s linear;
+  text-align: start;
+}
+.leftMenuColumn .leftMenu .menu-item.active {
+  color: var(--primary-color, #3A4B5B);
+}
+@media screen and (min-width: 991.98px) {
+  .leftMenuColumn .leftMenu .menu-item:hover {
+    color: var(--primary-color, #3A4B5B);
+  }
 }
 
 .centerContent {

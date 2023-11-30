@@ -1,0 +1,51 @@
+.leftMenuColumn {
+    position: relative;
+    z-index: 1;
+    width: 31%;
+    min-width: 31%;
+
+    &:before {
+        content: "";
+        width: 121%;
+        height: 140%;
+        top: -32px;
+        right: 100px;
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(92.01% 94.03% at 133.7% 87.97%, #ededed 0, rgba(246, 246, 246, 0) 83%); 
+        z-index: -1;
+        @media screen and (max-width:1400px) {
+            width: 150%;
+            height: 135%;
+            top: -40px;
+            right: 60px;
+        }
+    }
+
+    .leftMenu { 
+        .menu-item {
+            overflow: hidden;
+            color: var(--gray-400, #CED4DA);
+            text-align: right;
+            text-overflow: ellipsis; 
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: block;
+            margin: 22px 0;
+            transition: all 0.3s linear;
+            text-align: start;
+
+            &.active {
+                color: var(--primary-color, #3A4B5B);
+            }
+
+            @media screen and (min-width:991.98px) {
+                &:hover {
+                    color: var(--primary-color, #3A4B5B);
+                }
+            }
+        }
+    }
+}

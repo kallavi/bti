@@ -1,0 +1,38 @@
+.subBanner {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    max-height: 307px;
+    height: 16vw;
+    padding-left: 8%;
+    padding-right: 8%;
+
+    @media screen and (max-width: 1400px) {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding-left: 10%;
+        padding-right: 10%; 
+    }
+    @media screen and (max-width:991.98px) {
+        height: 130px;
+    }
+ 
+}
+
+.subBannerContainer {
+    width: 100%;
+    position: relative; 
+    .title {
+        position: relative;
+        display: inline-block;
+        padding: 0 20px;
+
+        @media screen and (max-width:1200px) {
+            padding: 0;
+        }  
+    } 
+}
+ 

@@ -176,6 +176,52 @@ section {
   }
 }
 
+#aboutSection {
+  padding: 2vw 0 16vw 0;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  #aboutSection {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #aboutSection {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0;
+  }
+}
+#aboutSection .aboutImg .imageWrapper {
+  width: 46%;
+  height: auto;
+}
+
+.textContent {
+  text-align: justify;
+}
+
+.contentPages {
+  padding: 0 0 16vw 0;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  .contentPages {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .contentPages {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0;
+  }
+}
+
 /*Anasayfada kullanılan play button ve animasyon. Anasayfadaki buton html i alınarak baska yerde kullanılabılır*/
 .playButton {
   position: relative;

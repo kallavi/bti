@@ -1,4 +1,24 @@
 @charset "UTF-8";
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+.preloader .preloader-spin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  backface-visibility: hidden;
+}
+
 .customIcon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "iconFont" !important;
@@ -1254,6 +1274,48 @@ footer .navbar-brand {
   }
 }
 
+.subBanner {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  max-height: 307px;
+  height: 16vw;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  .subBanner {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .subBanner {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .subBanner {
+    height: 130px;
+  }
+}
+
+.subBannerContainer {
+  width: 100%;
+  position: relative;
+}
+.subBannerContainer .title {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .subBannerContainer .title {
+    padding: 0;
+  }
+}
+
 .modal {
   --bs-modal-bg: #132a3fba;
   --bs-backdrop-bg: #132a3fba;
@@ -1308,6 +1370,58 @@ footer .navbar-brand {
 .modal .btn-close .customIcon {
   transform: rotate(90deg);
   font-size: 40px;
+}
+
+.leftMenuColumn {
+  position: relative;
+  z-index: 1;
+  width: 31%;
+  min-width: 31%;
+}
+.leftMenuColumn:before {
+  content: "";
+  width: 121%;
+  height: 140%;
+  top: -32px;
+  right: 100px;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(92.01% 94.03% at 133.7% 87.97%, #ededed 0, rgba(246, 246, 246, 0) 83%);
+  z-index: -1;
+}
+@media screen and (max-width: 1400px) {
+  .leftMenuColumn:before {
+    width: 150%;
+    height: 135%;
+    top: -40px;
+    right: 60px;
+  }
+}
+.leftMenuColumn .leftMenu .menu-item {
+  overflow: hidden;
+  color: var(--gray-400, #CED4DA);
+  text-align: right;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: block;
+  margin: 22px 0;
+  transition: all 0.3s linear;
+  text-align: start;
+}
+.leftMenuColumn .leftMenu .menu-item.active {
+  color: var(--primary-color, #3A4B5B);
+}
+@media screen and (min-width: 991.98px) {
+  .leftMenuColumn .leftMenu .menu-item:hover {
+    color: var(--primary-color, #3A4B5B);
+  }
+}
+
+.cards .card .imageWrapper {
+  border-radius: 0 0 0 95px;
 }
 
 .centerContent {
@@ -6641,6 +6755,52 @@ section {
   }
 }
 
+#aboutSection {
+  padding: 2vw 0 16vw 0;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  #aboutSection {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #aboutSection {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0;
+  }
+}
+#aboutSection .aboutImg .imageWrapper {
+  width: 46%;
+  height: auto;
+}
+
+.textContent {
+  text-align: justify;
+}
+
+.contentPages {
+  padding: 0 0 16vw 0;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  .contentPages {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .contentPages {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0;
+  }
+}
+
 /*Anasayfada kullanılan play button ve animasyon. Anasayfadaki buton html i alınarak baska yerde kullanılabılır*/
 .playButton {
   position: relative;
@@ -6875,7 +7035,7 @@ a {
   }
 }
 
-strong,
+li,
 p {
   color: var(--gray-600, #6C757D);
   font-size: 18px;
@@ -6884,15 +7044,16 @@ p {
   line-height: 22px;
 }
 @media screen and (max-width: 1400px) {
-  strong,
+  li,
   p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 991.98px) {
-  strong,
+  li,
   p {
     font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -6902,6 +7063,48 @@ strong {
 @media screen and (max-width: 991.98px) {
   strong {
     font-size: 16px;
+  }
+}
+
+h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10.41666vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150px;
+  background: linear-gradient(106deg, #ededed 38.81%, rgba(246, 246, 246, 0) 115.2%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 1921px) {
+  h1 {
+    font-size: 200px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  h1 {
+    font-size: 50px;
+    line-height: normal;
+  }
+}
+
+h3 {
+  color: var(--gray-600, #6C757D);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (max-width: 1400px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  h3 {
+    font-size: 28px;
   }
 }
 

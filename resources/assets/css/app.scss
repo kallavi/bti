@@ -71,8 +71,7 @@ a {
     font-size: 14px;
   }
 }
-
-strong,
+li,
 p {
   color: var(--gray-600, #6C757D);
   font-size: 18px;
@@ -86,16 +85,52 @@ p {
 
   @media screen and (max-width:991.98px) {
     font-size: 14px;
+    line-height: 20px;
   }
 }
-
 strong {
-  font-weight: 700;
-
+  font-weight: 700;  
   @media screen and (max-width:991.98px) {
     font-size: 16px;
   }
 }
+
+h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10.41666vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150px;
+  background: linear-gradient(106deg, #ededed 38.81%, rgba(246, 246, 246, 0.00) 115.2%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media screen and (min-width:1921px) {
+    font-size: 200px;
+  }
+  @media screen and (max-width:991.98px) {
+    font-size: 50px;
+    line-height: normal;
+  } 
+}
+
+h3 {
+  color: var(--gray-600, #6C757D); 
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @media screen and (max-width:1400px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width:991.98px) {
+    font-size: 28px;
+  }
+}
+
+
 
 .imageWrapper {
   width: 100%;
