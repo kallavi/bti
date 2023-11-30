@@ -1,0 +1,69 @@
+$enable-negative-margins: true;
+
+$primary-dark:#384857;
+$gray-700: #495057;
+$teal-300: #00BAA3;
+$alternate:#01B5C0;
+$danger:#E1081E;
+$gold:#CA9E67;
+$pink:#EA868F;
+$brown:#906541;
+$gray-800:#343A40;
+$red-400:#CB3C24;
+$white:#ffffff;
+$colors:(
+    primary-dark:$primary-dark,
+    gray-700:$gray-700,
+    teal-300: $teal-300,
+    danger:$danger,
+    gold:$gold,
+    pink:$pink,
+    brown:$brown,
+    gray-800:$gray-800,
+    red-400:$red-400,
+    alternate:$alternate,
+    white:$white
+);
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+    .btn-#{$name} {
+        color:#ffffff;
+        border-color:$color;
+        background-color:$color;
+    }
+    
+    .btn-#{$name}{
+        @media screen and (min-width:991.98px) {
+            &:hover{
+                color:$color!important;
+                border-color:$color;
+                background-color:#ffffff!important;
+            }
+        }
+    }
+    .text-#{$name} {
+        color: $color!important;
+        p,a,span,ul,li{
+            color: $color!important;
+        }
+    }
+    .paragraph{
+        &.text-#{$name} {
+            color: $color!important;
+            p,a,span,ul,li{
+                color: $color!important;
+            }
+        }
+    }
+}
+@media screen and (min-width:1600px) { 
+    .container-3xl{
+        max-width: 1506px;
+        width: 100%;
+        margin: 0 auto;
+    }  
+}
+ 

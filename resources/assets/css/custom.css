@@ -1,0 +1,368 @@
+@charset "UTF-8";
+.scroll_down {
+  width: 33.69px;
+  height: 46px;
+  position: absolute;
+  bottom: 65px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 8;
+  transition: all 0.3s linear;
+  scroll-behavior: smooth;
+}
+@media screen and (min-width: 1921px) {
+  .scroll_down {
+    bottom: 2.520833vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .scroll_down {
+    width: 22.69px;
+    height: 37px;
+    bottom: 85px;
+  }
+}
+.scroll_down:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.scroll_down.scroller {
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+  transition: all 0.3s linear;
+}
+.scroll_down.scroller .customIcon::before {
+  font-size: 55px;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+/*Section*/
+section {
+  position: relative;
+}
+
+#tanitimSection {
+  padding-top: 10.5vw;
+  padding-bottom: 9vw;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  #tanitimSection {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #tanitimSection {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 12vw;
+  }
+}
+#tanitimSection .contentContainer {
+  position: relative;
+  z-index: 2;
+}
+#tanitimSection .textContent {
+  position: relative;
+}
+#tanitimSection .textContent .tanitimText {
+  padding-right: 5rem;
+  z-index: 1;
+}
+@media screen and (max-width: 1400px) {
+  #tanitimSection .textContent .tanitimText {
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #tanitimSection .textContent .tanitimText {
+    padding-right: 0;
+  }
+}
+#tanitimSection .text-image {
+  width: 22%;
+  height: auto;
+  overflow: visible;
+  z-index: 1;
+}
+@media screen and (max-width: 991.98px) {
+  #tanitimSection .text-image {
+    width: 28%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #tanitimSection .text-image {
+    width: 32%;
+  }
+}
+#tanitimSection .text-image img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+}
+@media screen and (max-width: 991.98px) {
+  #tanitimSection .text-image img {
+    width: 100%;
+  }
+}
+#tanitimSection .videoContent {
+  z-index: 1;
+  position: relative;
+}
+#tanitimSection .videoContent::before {
+  content: "";
+  background-image: url("/resources/assets/images/svg/video-bg.svg");
+  position: absolute;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 21vw;
+  height: 148%;
+  left: 14.5vw;
+  top: -6.5vw;
+}
+@media screen and (min-width: 1921px) {
+  #tanitimSection .videoContent::before {
+    width: 343px;
+    height: 152%;
+    left: 16.5rem;
+    top: -7.5rem;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #tanitimSection .videoContent::before {
+    width: 40vw;
+    height: 160%;
+    left: 25vw;
+    top: -12vw;
+  }
+}
+
+#logoSection {
+  padding-top: 2.5vw;
+  padding-bottom: 7vw;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  #logoSection {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #logoSection {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10.5vw;
+  }
+}
+
+/*Anasayfada kullanılan play button ve animasyon. Anasayfadaki buton html i alınarak baska yerde kullanılabılır*/
+.playButton {
+  position: relative;
+  z-index: 1;
+}
+.playButton .customIcon {
+  animation: playIcon 2s alternate infinite;
+  font-size: 40px;
+}
+@media screen and (max-width: 1440px) {
+  .playButton .customIcon {
+    top: 2px;
+    position: relative;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .playButton .customIcon {
+    font-size: 13px;
+    top: 0;
+  }
+}
+.playButton:before {
+  content: "";
+  position: absolute;
+  width: 102.096px;
+  height: 102.096px;
+  top: 50%;
+  left: 50%;
+  margin-left: -52.5px;
+  margin-top: -52.5px;
+  background-color: #3A4B5B;
+  z-index: -1;
+  border-radius: 100%;
+  animation: playBack 2s alternate infinite;
+}
+@media screen and (max-width: 1441px) {
+  .playButton:before {
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .playButton:before {
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -21px;
+  }
+}
+.playButton:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  margin-left: -46.5px;
+  margin-top: -46.5px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 4px solid #3A4B5B;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 100%;
+  animation: playBack2 2s alternate infinite;
+}
+@media screen and (max-width: 1441px) {
+  .playButton:after {
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+    margin-top: -35px;
+    border: 2px solid #3A4B5B;
+  }
+}
+@media screen and (max-width: 600px) {
+  .playButton:after {
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -21px;
+  }
+}
+
+.videoCover {
+  position: relative;
+}
+@media screen and (max-width: 991.98px) {
+  .videoCover {
+    width: 100%;
+  }
+}
+.videoCover .imageWrapper {
+  aspect-ratio: 8/4.5;
+}
+.videoCover .playButton {
+  position: absolute;
+  top: 48%;
+  right: 48%;
+}
+@media screen and (max-width: 600px) {
+  .videoCover .playButton {
+    top: 47%;
+    right: 48.5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .videoCover .playButton {
+    top: 47%;
+    right: 48.5%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .videoCover .playButton {
+    top: 43%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .videoCover .noteBg {
+    margin-top: -62px;
+    margin-left: 22px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 45px 14px 47px 10px;
+    width: 363px;
+    height: 120.874px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .videoCover .noteBg {
+    padding: 27px 88px 27px 10px;
+    width: 377px;
+    height: 100.874px;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .videoCover .noteBg {
+    padding: 27px 85px 27px 10px;
+    margin-top: -40px;
+    margin-left: 22px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .videoCover .noteBg {
+    width: 80%;
+    height: auto;
+    margin-top: -40px;
+    margin-left: 22px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 19px 14px 15px 10px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .videoCover .noteBg {
+    width: 79%;
+    padding: 4px 18px 15px 10px;
+  }
+}
+
+@keyframes playIcon {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes playBack {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.72);
+  }
+}
+@keyframes playBack2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}/*# sourceMappingURL=custom.css.map */
