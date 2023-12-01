@@ -138,3 +138,101 @@ $('.modal').on('hidden.bs.modal', function () {
     document.documentElement.style.overflow = 'auto';
 });
 
+
+//MEDYA SAYFASI CARD FİLTRELEME
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const cards = document.querySelectorAll(".card");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+ 
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+ 
+            button.classList.add("active");
+ 
+            const filterCategory = button.getAttribute("data-filter");
+ 
+            cards.forEach(card => {
+                card.style.display = "none";
+            }); 
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute("data-category");
+
+                if (filterCategory === "all" || filterCategory === cardCategory) {
+                    card.style.display = "block";
+                }
+            });
+        });
+    });
+});
+
+
+
+
+$(document).ready(function() {
+    $('[data-fancybox="gallery"]').fancybox({
+        infobar: false, // Infobar'ı kapat
+            toolbar: false, // Araç çubuğunu kapat
+            smallBtn: true, // Küçük kapatma butonunu gösterme
+      transitionEffect: "slide",
+      slideShow: {
+        autoStart: false, // Otomatik başlatmayı istemiyorsanız false olarak ayarlayın
+        speed: 2000 // Slide geçiş hızı (ms cinsinden)
+      },
+      buttons: [
+        "slideShow",
+        "fullScreen",
+        "thumbs",
+        "close"
+      ],
+      
+    });
+  });
+// document.addEventListener("DOMContentLoaded", function () {
+//     const filterButtons = document.querySelectorAll(".filter-button");
+//     const cards = document.querySelectorAll(".card");
+
+//     // Mark the "photos" button as active by default
+//     const defaultFilterCategory = "photos";
+//     const defaultFilterButton = document.querySelector(`[data-filter="${defaultFilterCategory}"]`);
+    
+//     if (defaultFilterButton) {
+//         defaultFilterButton.classList.add("active");
+//     }
+
+//     filterButtons.forEach(button => {
+//         button.addEventListener("click", function (event) {
+//             event.preventDefault();
+
+//             console.log("Button clicked:", button.getAttribute("data-filter"));
+
+//             filterButtons.forEach(btn => {
+//                 btn.classList.remove("active");
+//             });
+
+//             button.classList.add("active");
+
+//             const filterCategory = button.getAttribute("data-filter");
+
+//             console.log("Filter Category:", filterCategory);
+
+//             cards.forEach(card => {
+//                 card.style.display = "none";
+//             });
+
+//             cards.forEach(card => {
+//                 const cardCategory = card.getAttribute("data-category");
+
+//                 if (filterCategory === "all" || filterCategory === cardCategory) {
+//                     card.style.display = "block";
+//                 }
+//             });
+//         });
+//     });
+// });
+
+

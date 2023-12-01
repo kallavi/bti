@@ -104,7 +104,8 @@ h1 {
   font-size: 10.41666vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 150px;
+  // line-height: 150px;
+  line-height: normal;
   background: linear-gradient(106deg, #ededed 38.81%, rgba(246, 246, 246, 0.00) 115.2%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -118,6 +119,16 @@ h1 {
     font-size: 50px;
     line-height: normal;
   }
+}
+
+h2 {
+  overflow: hidden;
+  color: var(--primary-color, #3A4B5B); 
+  text-overflow: ellipsis; 
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 h3 {
@@ -136,15 +147,26 @@ h3 {
   }
 }
 
+
+
 h5 {
   color: var(--primary-color, #3A4B5B);
-  text-align: center; 
+  text-align: center;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 22px; 
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @media screen and (max-width:1400px) {
+    font-size: 16px;
+  }
+
   @media screen and (max-width:991.98px) {
-    font-size: 14px; 
+    font-size: 14px;
     font-weight: 500;
     line-height: normal;
   }
