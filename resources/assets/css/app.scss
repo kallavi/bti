@@ -71,6 +71,7 @@ a {
     font-size: 14px;
   }
 }
+
 li,
 p {
   color: var(--gray-600, #6C757D);
@@ -88,8 +89,10 @@ p {
     line-height: 20px;
   }
 }
+
 strong {
-  font-weight: 700;  
+  font-weight: 700;
+
   @media screen and (max-width:991.98px) {
     font-size: 16px;
   }
@@ -106,27 +109,44 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   @media screen and (min-width:1921px) {
     font-size: 200px;
   }
+
   @media screen and (max-width:991.98px) {
     font-size: 50px;
     line-height: normal;
-  } 
+  }
 }
 
 h3 {
-  color: var(--gray-600, #6C757D); 
+  color: var(--gray-600, #6C757D);
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+
   @media screen and (max-width:1400px) {
     font-size: 30px;
   }
 
   @media screen and (max-width:991.98px) {
     font-size: 28px;
+  }
+}
+
+h5 {
+  color: var(--primary-color, #3A4B5B);
+  text-align: center; 
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; 
+  @media screen and (max-width:991.98px) {
+    font-size: 14px; 
+    font-weight: 500;
+    line-height: normal;
   }
 }
 

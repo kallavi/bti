@@ -963,6 +963,42 @@ footer .navbar-brand {
   }
 }
 
+.cards .card {
+  border: none;
+  border-radius: 0;
+}
+.cards .card .imageWrapper {
+  position: relative;
+  border-radius: 0 0 0 95px;
+  max-width: 253px;
+  overflow: hidden;
+}
+.cards .card .imageWrapper img {
+  border-radius: 0;
+  filter: grayscale(1);
+  transition: all 0.3s linear;
+  transform-origin: center bottom;
+}
+.cards .card .imageWrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(173, 216, 230, 0.5);
+  z-index: 1;
+  transition: background-color 0.3s linear;
+}
+.cards .card .imageWrapper:hover::before {
+  background-color: rgba(173, 216, 230, 0);
+}
+@media screen and (min-width: 992px) {
+  .cards .card img:hover {
+    transform: scale(1.2);
+  }
+}
+
 .centerContent {
   position: relative;
   padding-bottom: 0;

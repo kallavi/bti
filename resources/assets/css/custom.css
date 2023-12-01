@@ -199,6 +199,25 @@ section {
   height: auto;
 }
 
+#cardSection {
+  padding-bottom: 5vw;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media screen and (max-width: 1400px) {
+  #cardSection {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #cardSection {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0;
+  }
+}
+
 .textContent {
   text-align: justify;
 }
