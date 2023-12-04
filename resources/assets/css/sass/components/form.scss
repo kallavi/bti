@@ -1,0 +1,159 @@
+.formWrapper {
+    padding: 30px;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+form {
+
+    option,
+    .form-select,
+    .form-control {
+        border-radius: 0;
+        border-bottom: 1px solid var(--secondary-color, #B0AEB0) !important;
+        background-color: var(--default-white, #fff);
+        height: 50px;
+        border: none;
+        box-shadow: none !important;
+        color: var(--gray-600, #6C757D);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 0 2rem;
+        background-position: right 1rem center;
+       
+        &:hover,
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::-ms-input-placeholder {
+            color: var(--gray-600, #6C757D);
+            opacity: 1;
+        }
+
+        &::-webkit-input-placeholder {
+            color: var(--gray-600, #6C757D);
+            opacity: 1;
+        }
+
+        &::placeholder {
+            color: var(--gray-600, #6C757D);
+            opacity: 1;
+            /* Firefox */
+        }
+
+        @media screen and (max-width:1400px) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width:991.98px) {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 1rem;
+        }
+    }
+
+    .phoneInput {
+        border-radius: 0 25px 25px 0 !important;
+    }
+
+    textarea {
+        height: auto !important;
+        @media screen and (max-width: 991.98px) {
+            max-height: 90px;
+        }
+    }
+
+    .input-group-text {
+        border-radius: 25px 0px 0px 25px;
+        background: var(--gray-100, #f8f9fa) !important;
+        border: none;
+        color: var(--gray-600, #6C757D);
+        font-size: 18px;
+        font-style: normal;
+    }
+
+    .form-check {
+        a {
+            transition: all 0.3s linear;
+
+            @media screen and (min-width:991.98px) {
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .form-check-input {
+        box-shadow: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:checked {
+            background-color: #384857;
+            border-color: #384857;
+        }
+        @media screen and (max-width:991.98px) {
+            margin-left: -13.5em !important;
+            margin-top: 0.1rem !important;
+        }
+    }
+
+    .form-check-label {
+        color: var(--gray-600, #6C757D);
+        font-size: 18px;
+        font-style: normal;
+        @media screen and (max-width:1400px) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width:991.98px) {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 1rem;
+            margin-left: 2rem;
+        }
+    }
+
+    .formSubmitBtn {
+        margin-bottom: -50px;
+        margin-top: 0px;
+        margin-bottom: -50px;
+        margin-left: 28px !important;
+        top: 20px;
+        position: relative;
+
+        @media screen and (max-width:991.98px) {
+            margin-top: 10px;
+        }
+    }
+
+
+    .invalid-tooltip {
+        opacity: 0.8;
+    }
+
+}
+
+
+
+input::-ms-input-placeholder {
+    color: var(--gray-600, #6C757D);
+    opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+    color: var(--gray-600, #6C757D);
+    opacity: 1;
+}
+
+input::placeholder {
+    color: var(--gray-600, #6C757D);
+    opacity: 1;
+    /* Firefox */
+}

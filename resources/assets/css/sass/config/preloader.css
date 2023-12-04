@@ -16,4 +16,9 @@
   height: 100%;
   position: relative;
   backface-visibility: hidden;
+}
+@media screen and (max-width: 991.98px) {
+  .preloader .preloader-spin img {
+    width: 50%;
+  }
 }/*# sourceMappingURL=preloader.css.map */

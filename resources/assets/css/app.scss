@@ -117,14 +117,15 @@ h1 {
 
   @media screen and (max-width:991.98px) {
     font-size: 50px;
-    line-height: normal;
+    line-height: 50px;
+    text-transform: capitalize;
   }
-}
+} 
 
 h2 {
   overflow: hidden;
-  color: var(--primary-color, #3A4B5B); 
-  text-overflow: ellipsis; 
+  color: var(--primary-color, #3A4B5B);
+  text-overflow: ellipsis;
   font-size: 46px;
   font-style: normal;
   font-weight: 700;
@@ -208,5 +209,96 @@ h5 {
     display: flex;
     align-items: center;
     margin: 0 auto;
+  }
+}
+
+/* Optional: Add a border and border-radius */
+.fancybox-navigation {
+  .fancybox-button {
+    border: 1px solid #fff;
+    /* Border color */
+    border-radius: 50%;
+    /* Border radius to make it circular */
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    opacity: 1 !important;
+    background: transparent;
+    color: #fff;
+    top: 48%;
+    @media screen and (max-width:600px) {
+      width: 40px;
+      height: 40px;
+    }
+    &:disabled {
+      color: #a0a0a0;
+      border: 1px solid #a0a0a0;
+    }
+
+    &>div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 75%;
+      }
+    }
+    &.fancybox-button--arrow_left{
+      left: 9vw;
+      @media screen and (min-width:1921px) {
+        left: 3rem;
+      }
+      @media screen and (max-width:1400px) {
+        left: 5vw;
+      }
+      @media screen and (max-width:991.98px) {
+        left: 1vw;
+      }
+    }
+    &.fancybox-button--arrow_right{
+      right: 9vw;
+      @media screen and (min-width:1921px) {
+        right: 3rem;
+      }
+      @media screen and (max-width:1400px) {
+        right: 5vw;
+      }
+      @media screen and (max-width:991.98px) {
+        right: 1vw;
+      }
+    }
+  }
+}
+
+.fancybox-close-small {
+  background: var(--primary-color-dark, #384857);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 80px;
+  padding-top: 0;
+  width: 76.934px;
+  height: 88.26px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width:600px) {
+    width: 56.934px;
+    height: 58.26px;
+  }
+  svg {
+    width: 75%;
+    color: #fff;
+    opacity: 1;
+    height: auto;
+    @media screen and (max-width:600px) {
+      width: 65%;
+    }
   }
 }

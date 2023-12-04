@@ -254,6 +254,70 @@
   color: #343A40 !important;
 }
 
+.bg-gray-400 {
+  background-color: #CED4DA;
+}
+
+.btn-gray-400 {
+  color: #ffffff;
+  border-color: #CED4DA;
+  background-color: #CED4DA;
+}
+
+@media screen and (min-width: 991.98px) {
+  .btn-gray-400:hover {
+    color: #CED4DA !important;
+    border-color: #CED4DA;
+    background-color: #ffffff !important;
+  }
+}
+
+.text-gray-400 {
+  color: #CED4DA !important;
+}
+.text-gray-400 p, .text-gray-400 a, .text-gray-400 span, .text-gray-400 ul, .text-gray-400 li {
+  color: #CED4DA !important;
+}
+
+.paragraph.text-gray-400 {
+  color: #CED4DA !important;
+}
+.paragraph.text-gray-400 p, .paragraph.text-gray-400 a, .paragraph.text-gray-400 span, .paragraph.text-gray-400 ul, .paragraph.text-gray-400 li {
+  color: #CED4DA !important;
+}
+
+.bg-gray-100 {
+  background-color: #F8F9FA;
+}
+
+.btn-gray-100 {
+  color: #ffffff;
+  border-color: #F8F9FA;
+  background-color: #F8F9FA;
+}
+
+@media screen and (min-width: 991.98px) {
+  .btn-gray-100:hover {
+    color: #F8F9FA !important;
+    border-color: #F8F9FA;
+    background-color: #ffffff !important;
+  }
+}
+
+.text-gray-100 {
+  color: #F8F9FA !important;
+}
+.text-gray-100 p, .text-gray-100 a, .text-gray-100 span, .text-gray-100 ul, .text-gray-100 li {
+  color: #F8F9FA !important;
+}
+
+.paragraph.text-gray-100 {
+  color: #F8F9FA !important;
+}
+.paragraph.text-gray-100 p, .paragraph.text-gray-100 a, .paragraph.text-gray-100 span, .paragraph.text-gray-100 ul, .paragraph.text-gray-100 li {
+  color: #F8F9FA !important;
+}
+
 .bg-red-400 {
   background-color: #CB3C24;
 }

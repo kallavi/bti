@@ -110,7 +110,8 @@ section {
     }
 
     .textContent {
-        position: relative; 
+        position: relative;
+
         .tanitimText {
             padding-right: 5rem;
             z-index: 1;
@@ -217,21 +218,23 @@ section {
 
     @media screen and (max-width: 991.98px) {
         padding-left: 10%;
-        padding-right: 10%; 
+        padding-right: 10%;
         padding-bottom: 0;
     }
-   
+
     .aboutImg {
         .imageWrapper {
             width: 46%;
-            height: auto; 
+            height: auto;
         }
     }
 }
-#cardSection{
+
+#cardSection {
     padding-bottom: 5vw;
     padding-left: 8%;
     padding-right: 8%;
+
     @media screen and (max-width: 1400px) {
         padding-left: 4%;
         padding-right: 4%;
@@ -239,14 +242,95 @@ section {
 
     @media screen and (max-width: 991.98px) {
         padding-left: 10%;
-        padding-right: 10%; 
+        padding-right: 10%;
         padding-bottom: 0;
     }
 }
-.textContent{
+
+#referansSection {
+    padding-bottom: 9vw;
+    padding-left: 8%;
+    padding-right: 8%;
+
+    @media screen and (max-width: 1400px) {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 0;
+    }
+
+}
+
+#contactSection {
+    .imageWrapper {
+        img {
+            width: auto;
+        }
+    }
+
+    .btn { 
+        @media screen and (min-width: 992px) {
+            padding: 12px 55px;
+            border-radius: 0;
+        }
+        @media screen and (max-width: 991.98px) {
+            border-radius: 100px;
+        }
+    }
+
+    .contact-iframe {
+        padding-top: 9vw;
+
+        iframe{
+            mix-blend-mode: luminosity;
+            display: block;
+            @media screen and (max-width: 991.98px) {
+                height: 385px;
+            }
+        }
+        @media screen and (min-width: 1921px) {
+            padding-top: 10rem;
+        }
+        @media screen and (max-width: 991.98px) {
+            padding-top: 2vw;
+        }
+    }
+    .socialMedia {
+       a{
+        &:first-child{ 
+            @media screen and (min-width: 992px) {
+                padding-left: 0;
+            }
+        }
+        @media screen and (max-width: 991.98px) {
+            padding: 0px 0.8rem;
+        }
+       }
+        .customIcon {
+            &:before {
+                color: var(--gray-600, #6C757D);
+            }
+        }
+    }
+    a{
+        color: var(--gray-600, #6C757D);
+    }
+    p{
+        @media screen and (max-width: 991.98px) {
+           margin: 0;
+        }
+    }
+}
+
+.textContent {
     text-align: justify;
 }
-.contentPages{
+
+.contentPages {
     padding: 0 0 16vw 0;
     padding-left: 8%;
     padding-right: 8%;
@@ -258,10 +342,11 @@ section {
 
     @media screen and (max-width: 991.98px) {
         padding-left: 10%;
-        padding-right: 10%; 
+        padding-right: 10%;
         padding-bottom: 0;
     }
 }
+
 /*Anasayfada kullanılan play button ve animasyon. Anasayfadaki buton html i alınarak baska yerde kullanılabılır*/
 .playButton {
     position: relative;

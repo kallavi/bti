@@ -33,5 +33,10 @@
         //     transform-origin: 30px 30px;
         //     box-sizing      : content-box;
         // }
+        img{
+            @media screen and (max-width:991.98px) {
+                width: 50%;
+              }
+        }
     }
 }
