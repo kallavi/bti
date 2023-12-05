@@ -343,10 +343,11 @@
     .btn{
         background: var(--gray-100, #F8F9FA);
         color: var(--gray-400, #CED4DA);
+        &:hover,
         &:active{
-            border-color: transparent;
-            background: var(--gray-100, #F8F9FA);
-            color: var(--gray-400, #CED4DA);
+            border-color: transparent !important;
+            background: var(--gray-100, #F8F9FA) !important;
+            color: var(--gray-400, #CED4DA) !important;
         }
     }
 }

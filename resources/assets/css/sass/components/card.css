@@ -322,8 +322,8 @@
   background: var(--gray-100, #F8F9FA);
   color: var(--gray-400, #CED4DA);
 }
-.cards-name .btn:active {
-  border-color: transparent;
-  background: var(--gray-100, #F8F9FA);
-  color: var(--gray-400, #CED4DA);
+.cards-name .btn:hover, .cards-name .btn:active {
+  border-color: transparent !important;
+  background: var(--gray-100, #F8F9FA) !important;
+  color: var(--gray-400, #CED4DA) !important;
 }/*# sourceMappingURL=card.css.map */

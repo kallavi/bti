@@ -30,34 +30,24 @@
       display: flex;
       align-items: center;
       text-align: left;
-      padding-top: 188px;
-      padding-bottom: 0; 
-
-      &::before {
-        content: '';
-        background-image: url('/resources/assets/images/svg/carousel-bg.svg');
-        position: absolute;
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 15vw;
-        height: 50%;
-        left: 0;
-        @media screen and (min-width: 1921px) {
-          width: 285px; 
-        }
-        @media screen and (max-width: 991.98px) {
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          position: relative;
-          height: 20%;
-        }
-        @media screen and (max-width: 600px) {
-          width: 65px;
-          height: 16%;
-        }
+      padding-top: 0;
+      padding-bottom: 0;  
+      padding-left: 8%;
+      padding-right: 8%; 
+      @media screen and (max-width: 991.98px) {
+          padding-left: 10%;
+          padding-right: 10%;
+          padding-bottom: 0;
+          padding-top: 75px;
+          padding-bottom: 0;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          &::before{
+            left: 0;
+          }
       }
+    
       @media screen and (max-width: 1600px) {
         padding-right: 8%;
         padding-left: 8%;
@@ -65,18 +55,41 @@
           left: 8%;
         }
       } 
-      @media screen and (max-width: 991.98px) {
-        padding-top: 75px;
-        padding-bottom: 0;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        &::before{
+      @media screen and (max-width: 1400px) {
+        padding-left: 4%;
+        padding-right: 4%;
+      }  
+      .caption-slide-content{ 
+        position: relative;
+        &::before {
+          content: '';
+          background-image: url('/resources/assets/images/svg/carousel-bg.svg');
+          position: absolute;
+          background-position: left;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 16vw;
+          height: 145%;
           left: 0;
+          top: -25px;
+          @media screen and (min-width: 1921px) {
+            width: 285px; 
+          }
+          @media screen and (max-width: 1400px) {
+            width: 26%;
+          }
+          @media screen and (max-width: 991.98px) {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            position: relative;
+            height: 100%;
+            display: block;
+          } 
         }
       }
-
       .slideCaption {
+        padding-left: 9rem;
         font-size: 52px;
         font-style: normal;
         font-weight: 700;
@@ -84,14 +97,22 @@
         padding-bottom: 48px;
         display: block;
         color: #fff;
+        width: 50%;
+        @media screen and (max-width: 1600px) {
+          margin-left: 7rem; 
+          width: 65%;
+          padding-left: 0;
+        }
         @media screen and (max-width: 1440px) {
           font-size: 40px; 
         }
         @media screen and (max-width: 991.98px) {
           font-size: 24px;
+          margin-left: 0; 
           text-align: center;
+          width: 100%;
         }
-  
+      
       }
 
       span {

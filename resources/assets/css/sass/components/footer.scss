@@ -7,10 +7,8 @@
         padding-right: 4%;
     } 
      .footer-menu {
-        height: 120px;
-
-         margin-left: 15.333333%;
-        
+        height: 133px;
+         margin-left: 15.333333%; 
      }
      .navbar-brand{
         z-index: 1;
@@ -29,10 +27,13 @@
     @media screen and (max-width: 991.98px) {
         padding-left: 10%;
         padding-right: 10%;
-        padding-top: 30.5vw;
+        padding-top: 15vw;
+        height: 100%;
     }
-    .contain{
-        padding-left: 19.5rem; 
+    @media screen and (max-width: 480px) { 
+        padding-top: 30.5vw; 
+    }
+    .contain{ 
         height: 100%;
         @media screen and (max-width: 1400px) {
             padding-left: 15rem; 
@@ -47,10 +48,19 @@
               }
             }
         }
-        .footer-img{
+        .footer-img{ 
             width: 110px;
             img{
                 width: 100%;
+            }
+            @media screen and (min-width: 992px) {
+                width: 237px;
+            }
+            @media screen and (max-width: 1400px) {
+                width: 165px;
+            }
+            @media screen and (max-width: 1400px) {
+                width: 145px;
             }
         }
         a {

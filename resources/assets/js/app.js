@@ -9,15 +9,59 @@ window.addEventListener('scroll', function () {
         header.classList.remove('fixed');
     }
 });
- 
 
-$(document).ready(function(){
-    $('#buttonScroll').on('click', function(){
-      $('html, body').animate({
-        scrollTop: $('#tanitimSection').offset().top
-      }, ); // Kaydırma süresi (milisaniye cinsinden)
+
+
+
+
+document.querySelectorAll('.nav-item.dropdown').forEach(function (dropdown) {
+    dropdown.addEventListener('show.bs.dropdown', function () {
+      document.querySelectorAll('.nav-item').forEach(function (navItem) {
+        if (navItem !== dropdown) {
+          navItem.classList.add('show');
+        }
+      });
+    });
+
+    dropdown.addEventListener('hide.bs.dropdown', function () {
+      document.querySelectorAll('.nav-item').forEach(function (navItem) {
+        navItem.classList.remove('show');
+      });
     });
   });
+
+
+
+
+
+
+
+
+ // Tıklama olayını dinle
+  document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      // Diğer öğelerin özelliklerini değiştir
+      document.querySelectorAll(".dropdown-toggle").forEach(function (otherToggle) {
+        if (otherToggle !== toggle) {
+          otherToggle.setAttribute("aria-expanded", "false");
+          otherToggle.classList.add("collapsed");
+        }
+      });
+
+      // Diğer öğelerden "show" sınıfını kaldırın
+      document.querySelectorAll(".list-unstyled").forEach(function (list) {
+        if (list !== toggle.nextElementSibling) {
+          list.classList.remove("show");
+        }
+      });
+    });
+  });
+ 
+
+
+
+
+
 
 function checkScreenSize() {
     if (window.innerWidth <= 992) { 
@@ -31,6 +75,7 @@ function checkScreenSize() {
         });
     }
 }
+
 
 $(document).ready(function () {
     checkScreenSize();
@@ -46,20 +91,79 @@ window.addEventListener('load', function () {
     }
 });
 
-// var burgerBtn = document.getElementById('burgerBtn');
-// var mobile = document.getElementById('mobile');
-// var demo1 = document.getElementById('demo1'); 
 
-// burgerBtn.addEventListener('click', function() {
-//   mobile.classList.toggle('navigation');   
-// }, false);
-
-// demo1.addEventListener('click', function() {
-//   demo1.classList.add('active'); 
-//   mobile.classList.add('demo1'); 
-// }, false);
 
  
+
+ 
+// script.js
+
+// script.js
+// document.addEventListener("DOMContentLoaded", function() {
+//     var burgerBtn = document.getElementById('burgerBtn');
+//     var mobile = document.getElementById('mobile');
+//     var demo1 = document.getElementById('demo1');
+
+//     burgerBtn.addEventListener('click', function() {
+//         mobile.classList.toggle('navigation');
+
+//         // Animasyonlu geçiş
+//         if (mobile.classList.contains('navigation')) {
+//             mobile.style.transition = 'height 0.3s';
+//             mobile.style.height = '100vh';
+//         } else {
+//             // setTimeout kullanılmasının sebebi, 'navigation' sınıfının
+//             // kaldırılması ve ardından animasyonun başlatılması için bir gecikme sağlamaktır.
+//             setTimeout(function() {
+//                 mobile.style.transition = 'height 0.3s';
+//                 mobile.style.height = 'auto';
+//             }, 300);
+//         }
+//     }, false);
+
+//     demo1.addEventListener('click', function() {
+//         demo1.classList.add('active');
+//         mobile.classList.add('demo1');
+
+//         // Demo1 sınıfı eklenince animasyonlu geçiş
+//         mobile.style.transition = 'height 0.3s';
+//         mobile.style.height = '100vh';
+//     }, false);
+// });
+document.addEventListener("DOMContentLoaded", function() {
+    var burgerBtn = document.getElementById('burgerBtn');
+    var mobile = document.getElementById('mobile');
+    var mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', function() {
+        mobile.classList.toggle('navigation');
+
+        if (mobile.classList.contains('navigation')) {
+            mobile.style.height = '100vh';
+        } else {
+            setTimeout(function() {
+                mobile.style.height = 'auto';
+            }, 300);
+        }
+    }, false);
+
+    mobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.add('active');
+        mobile.classList.add('mobileMenu');
+
+        // Demo1 sınıfı eklenince animasyonlu geçiş
+        mobile.style.height = '100vh';
+    }, false);
+});
+
+
+
+
+
+
+
+
+
 // mobil hamburger menu bbutonu tıklandıgındaki işlevler icin
 var navbarToggler = document.querySelector('.navbar-toggler');
 var navbarTogglerParent = document.querySelector('header');

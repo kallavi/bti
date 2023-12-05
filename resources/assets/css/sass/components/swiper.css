@@ -30,38 +30,24 @@
   display: flex;
   align-items: center;
   text-align: left;
-  padding-top: 188px;
+  padding-top: 0;
   padding-bottom: 0;
-}
-.swiper.carouselSlider .desc::before {
-  content: "";
-  background-image: url("/resources/assets/images/svg/carousel-bg.svg");
-  position: absolute;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 15vw;
-  height: 50%;
-  left: 0;
-}
-@media screen and (min-width: 1921px) {
-  .swiper.carouselSlider .desc::before {
-    width: 285px;
-  }
+  padding-left: 8%;
+  padding-right: 8%;
 }
 @media screen and (max-width: 991.98px) {
+  .swiper.carouselSlider .desc {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0;
+    padding-top: 75px;
+    padding-bottom: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   .swiper.carouselSlider .desc::before {
     left: 0;
-    right: 0;
-    margin: 0 auto;
-    position: relative;
-    height: 20%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .swiper.carouselSlider .desc::before {
-    width: 65px;
-    height: 16%;
   }
 }
 @media screen and (max-width: 1600px) {
@@ -73,19 +59,49 @@
     left: 8%;
   }
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1400px) {
   .swiper.carouselSlider .desc {
-    padding-top: 75px;
-    padding-bottom: 0;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding-left: 4%;
+    padding-right: 4%;
   }
-  .swiper.carouselSlider .desc::before {
+}
+.swiper.carouselSlider .desc .caption-slide-content {
+  position: relative;
+}
+.swiper.carouselSlider .desc .caption-slide-content::before {
+  content: "";
+  background-image: url("/resources/assets/images/svg/carousel-bg.svg");
+  position: absolute;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16vw;
+  height: 145%;
+  left: 0;
+  top: -25px;
+}
+@media screen and (min-width: 1921px) {
+  .swiper.carouselSlider .desc .caption-slide-content::before {
+    width: 285px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .swiper.carouselSlider .desc .caption-slide-content::before {
+    width: 26%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .swiper.carouselSlider .desc .caption-slide-content::before {
     left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    display: block;
   }
 }
 .swiper.carouselSlider .desc .slideCaption {
+  padding-left: 9rem;
   font-size: 52px;
   font-style: normal;
   font-weight: 700;
@@ -93,6 +109,14 @@
   padding-bottom: 48px;
   display: block;
   color: #fff;
+  width: 50%;
+}
+@media screen and (max-width: 1600px) {
+  .swiper.carouselSlider .desc .slideCaption {
+    margin-left: 7rem;
+    width: 65%;
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 1440px) {
   .swiper.carouselSlider .desc .slideCaption {
@@ -102,7 +126,9 @@
 @media screen and (max-width: 991.98px) {
   .swiper.carouselSlider .desc .slideCaption {
     font-size: 24px;
+    margin-left: 0;
     text-align: center;
+    width: 100%;
   }
 }
 .swiper.carouselSlider .desc span.text {

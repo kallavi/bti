@@ -47,7 +47,15 @@
             </div>
         </div>
     </div>
-    <div class="mainBody">
+    <div class="mainBody mobileMenu" id="mobile"> 
+        <div id="burgerBtn" class="d-flex d-lg-none"></div>
+        <ul id="nav">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="mobileBodyContent">
         <header class="subHeader">
             <div class="container-3xl headerFixedMenu">
                 <div class="py-4">
@@ -326,15 +334,15 @@
                 </nav>
             </div>
         </footer>
-        <div class="footer-bottom container-3xl">
-            <div class="contain pe-lg-2 pe-3 ps-3 ps-lg-0 pb-4 pb-lg-0 d-flex align-items-center justify-content-between flex-column flex-lg-row bg-white">
+        <div class="footer-bottom">
+            <div class="contain container-3xl pe-lg-0 pe-3 ps-3 ps-lg-0 pb-4 pb-lg-0 d-flex align-items-center justify-content-between flex-column flex-lg-row bg-white">
                 <a class="footer-img" href="index.html">
                     <img class="darkImg d-block d-lg-none" src="../../assets/images/logos/home-dark-logo.svg" alt="">
                 </a>
                 <div class="copyRight d-none d-lg-block">
                     <a href="javascript:;">© 2023 btikreatifajans.com </a>
                 </div>
-                <div class="address col-12 col-lg-5 py-lg-0 pt-3 pb-2">
+                <div class="address col-12 col-lg-4 px-xl-0  px-lg-3 py-lg-0 pt-3 pb-2">
                     <a href="https://maps.app.goo.gl/MkERhJDjG524PVQq7" target="_blank">
                         Soğanlık Yeni Mah. Aliağa Sok. No.:8 Bumerang Kartal Kat: 27 D: 140 İstanbul/Türkiye
                     </a>
@@ -369,6 +377,7 @@
                 </div>
             </div>
         </div> 
+    </div> 
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="../../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

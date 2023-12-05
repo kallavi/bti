@@ -10,7 +10,7 @@ footer {
   }
 }
 footer .footer-menu {
-  height: 120px;
+  height: 133px;
   margin-left: 15.333333%;
 }
 footer .navbar-brand {
@@ -34,11 +34,16 @@ footer .navbar-brand {
   .footer-bottom {
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 15vw;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer-bottom {
     padding-top: 30.5vw;
   }
 }
 .footer-bottom .contain {
-  padding-left: 19.5rem;
   height: 100%;
 }
 @media screen and (max-width: 1400px) {
@@ -61,6 +66,21 @@ footer .navbar-brand {
 }
 .footer-bottom .contain .footer-img img {
   width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .footer-bottom .contain .footer-img {
+    width: 237px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .footer-bottom .contain .footer-img {
+    width: 165px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .footer-bottom .contain .footer-img {
+    width: 145px;
+  }
 }
 .footer-bottom .contain a {
   color: var(--gray-400, #CED4DA);
