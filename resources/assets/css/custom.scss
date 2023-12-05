@@ -131,7 +131,7 @@ section {
         width: 22%;
         height: auto;
         overflow: visible;
-        z-index: 1;
+        z-index: 10;
 
         @media screen and (max-width: 991.98px) {
             width: 28%
@@ -168,7 +168,7 @@ section {
             height: 148%;
             left: 14.5vw;
             top: -6.5vw;
-
+            z-index: 0;
             @media screen and (min-width: 1921px) {
                 width: 343px;
                 height: 152%;

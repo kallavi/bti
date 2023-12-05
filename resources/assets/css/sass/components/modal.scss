@@ -1,8 +1,9 @@
-
+.modal-backdrop.fade {
+    position: relative;
+}
 .modal {
     --bs-modal-bg: #132a3fba;
-    --bs-backdrop-bg: #132a3fba;
-
+    --bs-backdrop-bg: #132a3fba; 
     .modal-content {
         .modal-body {
             

@@ -162,22 +162,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// mobil hamburger menu bbutonu tıklandıgındaki işlevler icin
-var navbarToggler = document.querySelector('.navbar-toggler');
-var navbarTogglerParent = document.querySelector('header');
-var body = document.querySelector('body');
+// // mobil hamburger menu bbutonu tıklandıgındaki işlevler icin
+// var navbarToggler = document.querySelector('.navbar-toggler');
+// var navbarTogglerParent = document.querySelector('header');
+// var body = document.querySelector('body');
 
-navbarToggler.addEventListener('click', function () {
-    if (navbarToggler.classList.contains('active')) {
-        navbarToggler.classList.remove('active');
-        navbarTogglerParent.classList.remove('active');
-        body.style.overflow = 'auto'; // Overflow'u yeniden etkinleştir
-    } else {
-        navbarToggler.classList.add('active');
-        navbarTogglerParent.classList.add('active');
-        body.style.overflow = 'hidden'; // Overflow'u devre dışı bırak
-    }
-});
+// navbarToggler.addEventListener('click', function () {
+//     if (navbarToggler.classList.contains('active')) {
+//         navbarToggler.classList.remove('active');
+//         navbarTogglerParent.classList.remove('active');
+//         body.style.overflow = 'auto'; // Overflow'u yeniden etkinleştir
+//     } else {
+//         navbarToggler.classList.add('active');
+//         navbarTogglerParent.classList.add('active');
+//         body.style.overflow = 'hidden'; // Overflow'u devre dışı bırak
+//     }
+// });
 
 var swiper = new Swiper(".carouselSlider", {
     slidesPerView: 1,
@@ -240,6 +240,26 @@ $('.modal').on('hidden.bs.modal', function () {
     document.documentElement.style.overflow = 'auto';
 });
 
+$(document).ready(function() {
+    console.log("fancy")
+    $('[data-fancybox="gallery"]').fancybox({
+        infobar: false, // Infobar'ı kapat
+            toolbar: false, // Araç çubuğunu kapat
+            smallBtn: true, // Küçük kapatma butonunu gösterme
+      transitionEffect: "slide",
+      slideShow: {
+        autoStart: false, // Otomatik başlatmayı istemiyorsanız false olarak ayarlayın
+        speed: 2000 // Slide geçiş hızı (ms cinsinden)
+      },
+      buttons: [
+        "slideShow",
+        "fullScreen",
+        "thumbs",
+        "close"
+      ],
+      
+    });
+  });
 
 //MEDYA SAYFASI CARD FİLTRELEME
 document.addEventListener("DOMContentLoaded", function () {
@@ -272,28 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-
-$(document).ready(function() {
-    $('[data-fancybox="gallery"]').fancybox({
-        infobar: false, // Infobar'ı kapat
-            toolbar: false, // Araç çubuğunu kapat
-            smallBtn: true, // Küçük kapatma butonunu gösterme
-      transitionEffect: "slide",
-      slideShow: {
-        autoStart: false, // Otomatik başlatmayı istemiyorsanız false olarak ayarlayın
-        speed: 2000 // Slide geçiş hızı (ms cinsinden)
-      },
-      buttons: [
-        "slideShow",
-        "fullScreen",
-        "thumbs",
-        "close"
-      ],
-      
-    });
-  });
+ 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const filterButtons = document.querySelectorAll(".filter-button");
 //     const cards = document.querySelectorAll(".card");

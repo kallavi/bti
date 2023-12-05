@@ -1489,6 +1489,10 @@ footer .navbar-brand {
   }
 }
 
+.modal-backdrop.fade {
+  position: relative;
+}
+
 .modal {
   --bs-modal-bg: #132a3fba;
   --bs-backdrop-bg: #132a3fba;
@@ -7327,7 +7331,7 @@ section {
   width: 22%;
   height: auto;
   overflow: visible;
-  z-index: 1;
+  z-index: 10;
 }
 @media screen and (max-width: 991.98px) {
   #tanitimSection .text-image {
@@ -7366,6 +7370,7 @@ section {
   height: 148%;
   left: 14.5vw;
   top: -6.5vw;
+  z-index: 0;
 }
 @media screen and (min-width: 1921px) {
   #tanitimSection .videoContent::before {
