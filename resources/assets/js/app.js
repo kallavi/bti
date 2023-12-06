@@ -4,7 +4,7 @@ window.addEventListener('scroll', function () {
     var subHeader = document.querySelector('.subHeader');
     var burgerBtn = document.querySelector('#burgerBtn');
 
-    var scrollThreshold = window.innerWidth <= 992 ? 40 : 100;
+    var scrollThreshold = window.innerWidth <= 992 ? 40 : 135;
 
     if (window.pageYOffset > scrollThreshold) {
         header.classList.add('fixed');

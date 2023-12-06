@@ -123,6 +123,12 @@
     top: 6vw;
   }
 }
+@media screen and (min-width: 1921px) {
+  .cards.type3 .card:hover .card-img-overlay, .cards.type2 .card:hover .card-img-overlay, .cards.type1 .card:hover .card-img-overlay {
+    opacity: 1;
+    top: 112px;
+  }
+}
 .cards.type2 .card .card-img-overlay .customIcon {
   font-size: 25px;
   transform: rotate(0);

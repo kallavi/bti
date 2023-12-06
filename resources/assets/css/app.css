@@ -1488,7 +1488,8 @@ footer .navbar-brand {
 }
 @media screen and (max-width: 991.98px) {
   .subBanner {
-    height: 130px;
+    min-height: 85px;
+    height: auto;
   }
 }
 
@@ -1738,6 +1739,12 @@ footer .navbar-brand {
   .cards.type3 .card:hover .card-img-overlay, .cards.type2 .card:hover .card-img-overlay, .cards.type1 .card:hover .card-img-overlay {
     opacity: 1;
     top: 6vw;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .cards.type3 .card:hover .card-img-overlay, .cards.type2 .card:hover .card-img-overlay, .cards.type1 .card:hover .card-img-overlay {
+    opacity: 1;
+    top: 112px;
   }
 }
 .cards.type2 .card .card-img-overlay .customIcon {
@@ -7470,7 +7477,7 @@ section {
 }
 
 #referansSection {
-  padding-bottom: 9vw;
+  padding-bottom: 7vw;
   padding-left: 8%;
   padding-right: 8%;
 }
