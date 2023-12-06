@@ -21,9 +21,7 @@ $utilities: map-merge($utilities,
 
 @import "custom";
 
-html {
-  height: 100%;
-}
+
 
 html,
 body {
@@ -98,6 +96,17 @@ strong {
   }
 }
 
+#scroll-animate{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  margin: 0 auto;
+  z-index: 9;
+}
+   
 h1 {
   overflow: hidden;
   text-overflow: ellipsis;

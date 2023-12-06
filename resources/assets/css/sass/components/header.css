@@ -382,9 +382,8 @@ header.fixed.subHeader {
   width: 30px;
   box-sizing: border-box;
   position: fixed;
-  z-index: 30;
+  z-index: 21;
   cursor: pointer;
-  transition: all 0.3s ease-in;
 }
 #burgerBtn.subBurgerBtn {
   border-top: 2px solid #9CA5AD;
@@ -500,6 +499,14 @@ header.fixed.subHeader {
 }
 .mobileMenu.navigation {
   height: 100vh;
+}
+.mobileMenu.navigation #burgerBtn:before {
+  content: "";
+  background: #FFF;
+}
+.mobileMenu.navigation #burgerBtn::after {
+  content: "";
+  background: #FFF;
 }
 .mobileMenu.navigation #mobileBodyContent {
   -khtml-transform: scale(0.85);

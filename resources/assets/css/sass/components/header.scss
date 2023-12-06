@@ -458,9 +458,9 @@ header {
     width: 30px;
     box-sizing: border-box;
     position: fixed;
-    z-index: 30;
+    z-index: 21;
     cursor: pointer;
-    transition: all 0.3s ease-in;
+    
 
     &.subBurgerBtn{
         border-top: 2px solid #9CA5AD;
@@ -593,6 +593,16 @@ header {
 
     &.navigation {
         height: 100vh;
+        #burgerBtn{
+            &:before{
+                content: '';
+                background: #FFF;
+            }
+            &::after{
+                content: '';
+                background: #FFF;
+            }
+        }
 
         #mobileBodyContent {
             -webkit-transform: scale(0.85);

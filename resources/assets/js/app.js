@@ -1,12 +1,35 @@
-// Scroll olayını dinlemek scroll
-window.addEventListener('scroll', function () { 
-    var header = document.querySelector('header'); 
+window.addEventListener('scroll', function () {
+    // var main = document.querySelector('.mobileMenu');
+    var header = document.querySelector('header');
+    var subHeader = document.querySelector('.subHeader');
+    var burgerBtn = document.querySelector('#burgerBtn');
 
-    // Yüksekliği kontrol ederek 'fixed' sınıfı eklenir
-    if (window.pageYOffset > 135) {
+    var scrollThreshold = window.innerWidth <= 992 ? 40 : 100;
+
+    if (window.pageYOffset > scrollThreshold) {
         header.classList.add('fixed');
+       
+        // main.classList.add('fixed');
+ 
+        if(subHeader){
+            subHeader.classList.add('fixed');
+        }
+       
+            burgerBtn.style.top = '40px';
+            console.log("çalıştı")
+            burgerBtn.style.filter = 'contrast(0.5)';
+        
     } else {
         header.classList.remove('fixed');
+        
+        // main.classList.remove('fixed');
+        if(subHeader){
+            subHeader.classList.remove('fixed');
+        }
+        
+            burgerBtn.style.top = '47px';
+            burgerBtn.style.filter = 'none'; // Filtreyi kaldır
+        
     }
 });
 
@@ -90,48 +113,11 @@ window.addEventListener('load', function () {
 });
 
 
-
  
-
- 
-// script.js
-
-// script.js
-// document.addEventListener("DOMContentLoaded", function() {
-//     var burgerBtn = document.getElementById('burgerBtn');
-//     var mobile = document.getElementById('mobile');
-//     var demo1 = document.getElementById('demo1');
-
-//     burgerBtn.addEventListener('click', function() {
-//         mobile.classList.toggle('navigation');
-
-//         // Animasyonlu geçiş
-//         if (mobile.classList.contains('navigation')) {
-//             mobile.style.transition = 'height 0.3s';
-//             mobile.style.height = '100vh';
-//         } else {
-//             // setTimeout kullanılmasının sebebi, 'navigation' sınıfının
-//             // kaldırılması ve ardından animasyonun başlatılması için bir gecikme sağlamaktır.
-//             setTimeout(function() {
-//                 mobile.style.transition = 'height 0.3s';
-//                 mobile.style.height = 'auto';
-//             }, 300);
-//         }
-//     }, false);
-
-//     demo1.addEventListener('click', function() {
-//         demo1.classList.add('active');
-//         mobile.classList.add('demo1');
-
-//         // Demo1 sınıfı eklenince animasyonlu geçiş
-//         mobile.style.transition = 'height 0.3s';
-//         mobile.style.height = '100vh';
-//     }, false);
-// });
 document.addEventListener("DOMContentLoaded", function() {
     var burgerBtn = document.getElementById('burgerBtn');
     var mobile = document.getElementById('mobile');
-    var mobileMenu = document.getElementById('mobileMenu');
+    // var mobileMenu = document.getElementById('mobileMenu');
 
     burgerBtn.addEventListener('click', function() {
         mobile.classList.toggle('navigation');
@@ -145,39 +131,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }, false);
 
-    mobileMenu.addEventListener('click', function() {
-        mobileMenu.classList.add('active');
-        mobile.classList.add('mobileMenu');
+    // mobileMenu.addEventListener('click', function() {
+    //     mobileMenu.classList.add('active');
+    //     mobile.classList.add('mobileMenu');
 
-        // Demo1 sınıfı eklenince animasyonlu geçiş
-        mobile.style.height = '100vh';
-    }, false);
+    //     // Demo1 sınıfı eklenince animasyonlu geçiş
+    //     mobile.style.height = '100vh';
+    // }, false);
 });
 
-
-
-
-
-
-
-
-
-// // mobil hamburger menu bbutonu tıklandıgındaki işlevler icin
-// var navbarToggler = document.querySelector('.navbar-toggler');
-// var navbarTogglerParent = document.querySelector('header');
-// var body = document.querySelector('body');
-
-// navbarToggler.addEventListener('click', function () {
-//     if (navbarToggler.classList.contains('active')) {
-//         navbarToggler.classList.remove('active');
-//         navbarTogglerParent.classList.remove('active');
-//         body.style.overflow = 'auto'; // Overflow'u yeniden etkinleştir
-//     } else {
-//         navbarToggler.classList.add('active');
-//         navbarTogglerParent.classList.add('active');
-//         body.style.overflow = 'hidden'; // Overflow'u devre dışı bırak
-//     }
-// });
+ 
 
 var swiper = new Swiper(".carouselSlider", {
     slidesPerView: 1,
@@ -240,6 +203,8 @@ $('.modal').on('hidden.bs.modal', function () {
     document.documentElement.style.overflow = 'auto';
 });
 
+
+
 $(document).ready(function() {
     console.log("fancy")
     $('[data-fancybox="gallery"]').fancybox({
@@ -260,12 +225,11 @@ $(document).ready(function() {
       
     });
   });
-
  
 
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-button");
-    const cards = document.querySelectorAll(".card");
+    const cards = document.querySelectorAll(".filterCard"); // Sadece filterCard class'ına sahip kartları seç
 
     // Varsayılan kategori olarak "photos" seçiliyor
     const defaultFilterCategory = "photos";
